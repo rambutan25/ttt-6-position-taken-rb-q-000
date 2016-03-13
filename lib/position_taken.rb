@@ -1,13 +1,9 @@
 def position_taken?(board, position)
 
     position = board[position.to_i]
-    if   board[position.to_i] == " "
+    if   board[position.to_i] == " " || board[position.to_i] == "" || board[position.to_i] == nil
     false
-    elsif  board[position.to_i] == ""
-      false
-      elsif board[position.to_i] == nil
-      false
-    else board[position.to_i] == "X" || "O"
+    else board[position.to_i] == "X" || board[position.to_i] == "O"
     true
     end
 end
